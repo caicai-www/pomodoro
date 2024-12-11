@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="background">
     <v-row>
       <v-col cols="12">
         <h1>目前事項 {{ currentText }}</h1>
@@ -9,12 +9,23 @@
       </v-col>
       <v-col cols="12">
         <v-btn
+          class="button"
           icon="mdi-play"
           :disabled="status === STATUS.COUNTING || (current.length === 0 && items.length === 0)"
           @click="startTimer"
         ></v-btn>
-        <v-btn icon="mdi-pause" :disabled="status !== STATUS.COUNTING" @click="pauseTimer"></v-btn>
-        <v-btn icon="mdi-skip-next" :disabled="current.length === 0" @click="finishTimer"></v-btn>
+        <v-btn
+          class="button"
+          icon="mdi-pause"
+          :disabled="status !== STATUS.COUNTING"
+          @click="pauseTimer"
+        ></v-btn>
+        <v-btn
+          class="button"
+          icon="mdi-skip-next"
+          :disabled="current.length === 0"
+          @click="finishTimer"
+        ></v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -96,6 +107,12 @@ const currentTime = computed(() => {
   return m + ':' + s
 })
 </script>
+
+<style>
+.button {
+  background: transparent;
+}
+</style>
 
 <route lang="yaml">
 meta:

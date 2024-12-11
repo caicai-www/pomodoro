@@ -44,12 +44,12 @@
               </td>
               <td>
                 <template v-if="item.edit">
-                  <v-btn icon="mdi-check" @click="onEditSubmit(item.id, i)"></v-btn>
-                  <v-btn icon="mdi-undo" @click="cancelEditItem(item.id)"></v-btn>
+                  <v-btn class="button" icon="mdi-check" @click="onEditSubmit(item.id, i)"></v-btn>
+                  <v-btn class="button" icon="mdi-undo" @click="cancelEditItem(item.id)"></v-btn>
                 </template>
                 <template v-else>
-                  <v-btn icon="mdi-pencil" @click="editItem(item.id)"></v-btn>
-                  <v-btn icon="mdi-delete" @click="delItem(item.id)"></v-btn>
+                  <v-btn class="button" icon="mdi-pencil" @click="editItem(item.id)"></v-btn>
+                  <v-btn class="button" icon="mdi-delete" @click="delItem(item.id)"></v-btn>
                 </template>
               </td>
             </tr>
@@ -75,7 +75,7 @@
             <tr v-for="item in finishedItems" :key="item.id">
               <td>{{ item.text }}</td>
               <td>
-                <v-btn icon="mdi-delete" @click="delFinishedItem(item.id)"></v-btn>
+                <v-btn class="button" icon="mdi-delete" @click="delFinishedItem(item.id)"></v-btn>
               </td>
             </tr>
           </tbody>

@@ -12,7 +12,7 @@
       </v-container>
     </v-app-bar>
 
-    <v-main>
+    <v-main class="bg-warning">
       <!-- ★要寫router-view才會顯示出to分頁內容!! -->
       <!--  slot= 插槽 = 自訂元件內某部分HTML
       v-slot="元件插槽提供的可用變數"

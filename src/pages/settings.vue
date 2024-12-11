@@ -6,14 +6,14 @@
       </v-col>
       <v-col cols="12">
         <v-table>
-          <thead>
+          <thead class="thead">
             <tr>
               <th>名稱</th>
               <th>試聽</th>
               <th>選擇</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="tbody">
             <tr v-for="alarm in settings.alarms" :key="alarm.id">
               <td>{{ alarm.name }}</td>
               <td>
@@ -66,3 +66,12 @@ meta:
   title: 設定
 </route>
 */
+
+<style>
+thead {
+  background: lightcoral;
+}
+tbody {
+  background: lightcoral;
+}
+</style>
