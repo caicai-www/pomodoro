@@ -1,0 +1,98 @@
+Vuetify
+https://vuetifyjs.com/en/components/all/#containment
+
+前置作業
+
+直接打開安裝好的資料夾
+
+assets logo刪除
+components 留read me(也可刪)
+layout整個資料夾刪掉
+pages index.vue刪掉
+
+app.vue內容清空(自己寫)
+
+
+★vite.config.mjs的檔案內把以下兩個內容刪掉
+18行     Layouts(),
+5行 	 import Layouts from 'vite-plugin-vue-layouts'
+
+可以在終端機把這個套件刪掉
+npm un vite-plugin-vue-layouts
+
+
+★安裝
+https://devtools.vuejs.org/guide/vite-plugin
+終端機安裝vite
+npm add -D vite-plugin-vue-devtools
+在vite.conig.mjs檔案內加上
+8行 import vueDevTools from 'vite-plugin-vue-devtools'
+47行 vueDevTools()
+
+
+安裝
+npm i -D prettier @vue/eslint-config-prettier
+
+
+複製上次preittier.json、vscode到這次資料夾內
+
+在eslint.config.js的檔案內加上
+3行  import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
+24行 skipFormatting
+
+
+★router資料夾index.js
+刪除第9行 import { setupLayouts } from 'virtual:generated-layouts'
+刪除第14行   routes: setupLayouts(routes),
+
+第8行 第12行 的createWebHistory 改成 createWebHashHistory
+第13行 要加上 routes,
+
+------------------------------------------------------------
+★app.vue 看網頁也是npm run dev
+
+
+<template>
+<v-app>
+// 導覽列
+  <v-app-bar>
+
+  </v-app-bar>
+
+// 內容
+<v-main>
+
+</v-main>
+
+</v-app>
+
+
+</template>
+
+------------------------------------------------------------
+store資料夾內把app.js刪掉
+自己新增settings.js
+
+----------------------------------------------------------
+
+安裝
+npm i pinia-plugin-persistedstate
+
+https://www.npmjs.com/package/pinia-plugin-persistedstate
+
+去stores裡面index.js更改內容
+引入 pinia-plugin-persistedstate
+----------------------------------------------------------
+
+打包前
+vite.config.mjs要加上
+16行  base:'./',
+
+
+npm run build
+
+npm run preview
+
+
+  <!--  autofocus =>自動聚焦 -->
+              <!-- 要用v-show不能v-if v-show會變成display:none 不會造成索引對不上的情況 -->
