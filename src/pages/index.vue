@@ -109,8 +109,17 @@ const currentTime = computed(() => {
 </script>
 
 <style>
+:root {
+  color-scheme: light;
+}
+
 .button {
   background: transparent;
+}
+
+.v-btn--disabled.v-btn--variant-elevated,
+.v-btn--disabled.v-btn--variant-flat {
+  background: #ff5400;
 }
 </style>
 

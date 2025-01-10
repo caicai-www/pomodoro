@@ -69,9 +69,13 @@ meta:
 
 <style>
 thead {
-  background: lightcoral;
+  background: tomato;
 }
 tbody {
-  background: lightcoral;
+  background: tomato;
+}
+
+.v-table {
+  background: tomato;
 }
 </style>

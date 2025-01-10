@@ -128,3 +128,19 @@ const onEditSubmit = (id, i) => {
 meta:
   title: 清單
 </route>
+
+<style>
+:root {
+  color-scheme: light;
+}
+thead {
+  background: tomato;
+}
+tbody {
+  background: tomato;
+}
+
+.v-btn--variant-elevated {
+  background: transparent;
+}
+</style>
